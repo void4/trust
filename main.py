@@ -65,7 +65,7 @@ for rnd in range(rounds):
             f2 = types[player2["type"]]
             d2 = f2(player2["history"][player1["id"]])
 
-            payoff = {(0,0):(-1,-1),(1,0):(-2,2),(0,1):(2,-2),(1,1):(1,1)}[(d1,d2)]
+            payoff = {(0,0):(-2,-2),(1,0):(-3,1),(0,1):(1,-3),(1,1):(2,2)}[(d1,d2)]
             player1["score"] += payoff[0]
             player2["score"] += payoff[1]
 
@@ -94,7 +94,6 @@ for rnd in range(rounds):
                 break
 
         remove = choice(lowest)
-        print(remove)
         sortedplayers.remove(remove)
 
     players = sortedplayers
